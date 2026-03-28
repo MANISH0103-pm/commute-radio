@@ -20,8 +20,8 @@ x_cookies.json
 # Generated audio output
 output/
 
-# Public folder (generated at deploy time, not stored in Git)
-public/
+# MP3 files are too large for git — deployed directly via Vercel CLI
+public/audio/
 
 # Debug artefacts
 debug_*.py
