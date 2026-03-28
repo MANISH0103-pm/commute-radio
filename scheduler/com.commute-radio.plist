@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!--
+  com.commute-radio.plist
+  ========================
+  This file tells macOS launchd to run the Commute Radio pipeline at 3:00 PM daily.
+
+  To ACTIVATE:   launchctl load ~/Library/LaunchAgents/com.commute-radio.plist
+  To DEACTIVATE: launchctl unload ~/Library/LaunchAgents/com.commute-radio.plist
+  To RUN NOW:    launchctl start com.commute-radio
+  To VIEW LOGS:  cat /tmp/commute-radio.log
+
+  Nothing is installed. This is a plain text config file read by macOS's
+  built-in scheduler (launchd), which ships on every Mac since 2005.
+-->
+
+<plist version="1.0">
+<dict>
+
+  <!-- Unique identifier for this job -->
+  <key>Label</key>
+  <string>com.commute-radio</string>
+
+  <!-- The command to run: uv run python run.py -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>-c</string>
+    <string>cd /Users/manishshetty/commute-radio && /Users/manishshetty/.local/bin/uv run python run.py</string>
+  </array>
+
+  <!-- Run at 3:00 PM every day -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>15</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <!-- Log stdout and stderr to a file so you can see what happened -->
+  <key>StandardOutPath</key>
+  <string>/tmp/commute-radio.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/commute-radio-error.log</string>
+
+  <!-- Run in the project directory -->
+  <key>WorkingDirectory</key>
+  <string>/Users/manishshetty/commute-radio</string>
+
+  <!-- Only run when logged in as this user -->
+  <key>RunAtLoad</key>
+  <false/>
+
+</dict>
+</plist>
