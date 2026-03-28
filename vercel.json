@@ -1,7 +1,9 @@
 {
   "version": 2,
   "name": "commute-radio",
+  "buildCommand": null,
   "outputDirectory": "public",
+  "framework": null,
   "headers": [
     {
       "source": "/feed.xml",
