@@ -26,3 +26,4 @@ public/audio/
 # Debug artefacts
 debug_*.py
 debug_*.png
+.vercel

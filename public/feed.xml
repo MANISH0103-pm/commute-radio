@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+  <channel>
+    <title>Commute Radio</title>
+    <link>https://commute-radio.vercel.app</link>
+    <description>Your personalised daily market briefing from X.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2026 16:26:03 +0000</lastBuildDate>
+
+    <itunes:author>Commute Radio</itunes:author>
+    <itunes:summary>Daily briefing scraped from your X accounts, summarised by Claude, and read aloud for your commute.</itunes:summary>
+    <itunes:category text="Business">
+      <itunes:category text="Investing"/>
+    </itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+
+    <item>
+      <title>March 28, 2026 · Afternoon Briefing</title>
+      <description>Hey there, welcome back to the feed. I'm your host, and today we're checking in on what's been buzzing from our friends at market sleuth and Basssem666 over on X.
+
+So first up, if you've been following the finance creator John and his Daily Market Roadmap newsletter, you're going to want to pay attention here. Starting April 6th, he's seriously leveling up the whole operation. We're talking expanded coverage across the Magnificent Seven stocks, QQQ, DIA, Treasuries, and for those of you on the paid tier, he's rolling out actual trade recommendations. The promo he dropped is pretty slick too, think stock charts, a compass, trading screens on a phone, all wrapped up in that bold Daily Market Roadmap branding. It's clear he's putting real effort into making this a go-to resource, so if you've been on the fence about subscribing, this might be the moment to jump in.
+
+Now on a completely different note, and honestly maybe even more important, John also took a moment over the weekend to remind everyone to just breathe. After what was, let's be honest, a pretty turbulent week in the markets, he wished everyone a happy Saturday and shared this absolutely stunning photo of a winding road cutting through a redwood forest with golden sunlight pouring through the canopy. And you know what, sometimes that's exactly what you need. A reminder that the charts will be there on Monday, but your peace of mind matters right now.
+
+That's your update for today, folks. Stay curious, stay grounded, and we'll catch you on the next one. Take care.</description>
+      <pubDate>Sat, 28 Mar 2026 16:26:03 +0000</pubDate>
+      <guid isPermaLink="false">commute-radio-20260328</guid>
+      <enclosure
+        url="https://commute-radio.vercel.app/audio/episode_20260328.mp3"
+        length="586080"
+        type="audio/mpeg"/>
+      <itunes:duration>35</itunes:duration>
+      <itunes:summary>Hey there, welcome back to the feed. I'm your host, and today we're checking in on what's been buzzing from our friends at market sleuth and Basssem666 over on X.
+
+So first up, if you've been following the finance creator John and his Daily Market Roadmap newsletter, you're going to want to pay attention here. Starting April 6th, he's seriously leveling up the whole operation. We're talking expanded coverage across the Magnificent Seven stocks, QQQ, DIA, Treasuries, and for those of you on the paid tier, he's rolling out actual trade recommendations. The promo he dropped is pretty slick too, think stock charts, a compass, trading screens on a phone, all wrapped up in that bold Daily Market Roadmap branding. It's clear he's putting real effort into making this a go-to resource, so if you've been on the fence about subscribing, this might be the moment to jump in.
+
+Now on a completely different note, and honestly maybe even more important, John also took a moment over the weekend to remind everyone to just breathe. After what was, let's be honest, a pretty turbulent week in the markets, he wished everyone a happy Saturday and shared this absolutely stunning photo of a winding road cutting through a redwood forest with golden sunlight pouring through the canopy. And you know what, sometimes that's exactly what you need. A reminder that the charts will be there on Monday, but your peace of mind matters right now.
+
+That's your update for today, folks. Stay curious, stay grounded, and we'll catch you on the next one. Take care.</itunes:summary>
+    </item>
+
+  </channel>
+</rss>

@@ -41,9 +41,10 @@ def stage_files(mp3_path: Path, feed_path: Path) -> None:
     dest_mp3 = AUDIO_DIR / mp3_path.name
     shutil.copy2(mp3_path, dest_mp3)
 
-    # Copy feed.xml to public/feed.xml
+    # Copy feed.xml to public/feed.xml (skip if already there)
     dest_feed = PUBLIC_DIR / "feed.xml"
-    shutil.copy2(feed_path, dest_feed)
+    if feed_path.resolve() != dest_feed.resolve():
+        shutil.copy2(feed_path, dest_feed)
 
     print(f"  Staged: {dest_mp3}")
     print(f"  Staged: {dest_feed}")
@@ -58,8 +59,9 @@ def deploy() -> str:
     """
     print("  Running: vercel --prod ...")
 
+    vercel_bin = os.path.expanduser("~/.npm-global/bin/vercel")
     result = subprocess.run(
-        ["vercel", "--prod", "--yes"],   # --yes skips confirmation prompts
+        [vercel_bin, "--prod", "--yes"],   # --yes skips confirmation prompts
         capture_output=True,
         text=True,
         cwd=str(Path.cwd()),
@@ -70,9 +72,12 @@ def deploy() -> str:
             f"Vercel deploy failed:\n{result.stderr or result.stdout}"
         )
 
-    # The last non-empty line of stdout is the deployed URL
-    lines = [l.strip() for l in result.stdout.splitlines() if l.strip()]
-    url = lines[-1] if lines else "unknown"
+    # Extract the stable production URL from "Aliased: <url>" line
+    url = "https://commute-radio.vercel.app"
+    for line in result.stdout.splitlines():
+        if "Aliased:" in line:
+            url = line.split("Aliased:")[-1].strip().split()[0]
+            break
     print(f"  Deployed to: {url}")
     return url
 
